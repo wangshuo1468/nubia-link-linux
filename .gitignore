@@ -1,0 +1,8 @@
+/build*/
+/cmake-build*/
+/dist/
+*.user
+*.swp
+*~
+__pycache__/
+*.pyc

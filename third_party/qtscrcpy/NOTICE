@@ -1,0 +1,10 @@
+QYUVOpenGLWidget from QtScrcpy by barry-ran and contributors.
+https://github.com/barry-ran/QtScrcpy
+Commit: f90e2259ea6745c30fc242f501a0210771288f8a
+Apache License 2.0; see LICENSE.
+Local changes: GL_UNPACK_ALIGNMENT=1 for unaligned frame strides;
+reset GL_UNPACK_ROW_LENGTH after uploads; round up odd chroma dimensions;
+select BT.601/BT.709 and full/limited YUV range from decoded frame metadata.
+Retain the latest frame until paintGL initializes textures; upload planes only
+while the rendering context is current and restore uploads on context creation.
+Sample a validated video content rectangle using shader texture coordinates.

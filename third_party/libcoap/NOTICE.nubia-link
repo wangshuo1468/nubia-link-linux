@@ -1,0 +1,9 @@
+libcoap 4.3.5, upstream tag v4.3.5.
+Source: https://github.com/obgm/libcoap/archive/refs/tags/v4.3.5.tar.gz
+License: BSD-2-Clause and bundled component notices; see LICENSE and COPYING.
+Upstream source is unchanged. Nubia Link builds it statically without DTLS,
+examples, documentation, upstream tests, OSCORE or proxy support. It supplies
+COAP_RXBUFFER_SIZE=10240 through the public target compile definitions.
+The NX721J sends one 2342-byte UDP discovery datagram, while Ubuntu's packaged
+libcoap uses a 1472-byte receive buffer. Runtime MTU changes cannot increase
+that compiled receive buffer. No system library is replaced.
